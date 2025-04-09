@@ -1,0 +1,210 @@
+:root {
+    --amazon-orange: #FF9900;
+    --amazon-dark: #131921;
+    --amazon-light: #232F3E;
+    --amazon-gray: #EAEDED;
+    --amazon-text: #333;
+    --amazon-link: #0066C0;
+}
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Amazon Ember', Arial, sans-serif;
+    color: var(--amazon-text);
+    background-color: var(--amazon-gray);
+    line-height: 1.6;
+}
+
+a {
+    color: var(--amazon-link);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Navigation */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--amazon-dark);
+    padding: 0.8rem 2rem;
+    color: white;
+}
+
+.nav-logo a {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-logo i {
+    font-size: 2rem;
+    margin-right: 0.5rem;
+}
+
+.nav-main ul {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+.nav-main a {
+    color: white;
+    font-size: 0.9rem;
+    padding: 0.5rem;
+}
+
+.nav-main a:hover {
+    text-decoration: none;
+    outline: 1px solid white;
+    border-radius: 2px;
+}
+
+.nav-account {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-account a {
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 0.9rem;
+}
+
+.nav-account i {
+    font-size: 1.2rem;
+}
+
+/* Hero Section */
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--amazon-orange);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #e68a00;
+}
+
+/* Products Section */
+.products {
+    padding: 3rem 2rem;
+}
+
+.products h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.product-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.product-card h3 {
+    padding: 1rem 1rem 0;
+}
+
+.price {
+    padding: 0 1rem;
+    font-weight: bold;
+    color: var(--amazon-orange);
+    font-size: 1.2rem;
+}
+
+.product-card .btn {
+    display: block;
+    margin: 1rem;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    background-color: var(--amazon-light);
+    color: white;
+    padding: 2rem;
+    text-align: center;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 1rem;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .nav-main ul {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+    }
+
+    .hero {
+        height: 300px;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+}
